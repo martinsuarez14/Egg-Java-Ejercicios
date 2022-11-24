@@ -19,12 +19,9 @@ public class Extra_5 {
         
         sc.menu();
         
-        
         sc.mostrarOrdenCP();
         
-        
         sc.mostrarOrdenCity();
-        
         
     }
 }
