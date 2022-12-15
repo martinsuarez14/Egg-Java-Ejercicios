@@ -82,16 +82,6 @@ public class Electrodomestico {
             default: return 'F';
         }
         
-        
-//        return switch (letra) {
-//            case 'A' -> letra;
-//            case 'B' -> letra;
-//            case 'C' -> letra;
-//            case 'D' -> letra;
-//            case 'E' -> letra;
-//            case 'F' -> letra;
-//            default -> 'F';
-//        };
     }
     
     public String comprobarColor(String color) {

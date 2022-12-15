@@ -10,8 +10,8 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class Televisor extends Electrodomestico{
-    
+public class Televisor extends Electrodomestico {
+
     private int resolucion;
     private boolean TDT;
 
@@ -46,12 +46,14 @@ public class Televisor extends Electrodomestico{
     }
 
     public void crearTelevisor() {
-        
+
+        System.out.println("CREAR TELEVISOR");
+
         super.crearElectrodomestico();
-        
+
         System.out.println("Ingrese la resolución en Pulgadas: ");
         setResolucion(leer.nextInt());
-        
+
         System.out.println("Tiene sintonizador TDT: S/N");
         String respuesta = leer.next();
         if (respuesta.equalsIgnoreCase("s")) {
@@ -59,7 +61,7 @@ public class Televisor extends Electrodomestico{
         } else {
             setTDT(false);
         }
-        
+
         precioFinal();
     }
 
@@ -72,6 +74,8 @@ public class Televisor extends Electrodomestico{
         if (isTDT() == true) {
             setPrecio(getPrecio() + 500);
         }
+        System.out.println("Televisor");
+        System.out.println("Precio ajustado: " + getPrecio());
     }
-    
+
 }

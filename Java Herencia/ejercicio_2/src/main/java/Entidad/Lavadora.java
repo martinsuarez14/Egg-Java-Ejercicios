@@ -32,6 +32,8 @@ public class Lavadora extends Electrodomestico{
 
     public void crearLavadora(){
         
+        System.out.println("CREAR LAVADORA");
+        
         super.crearElectrodomestico();
         
         System.out.println("Ingrese la capacidad de la lavadora: ");
@@ -47,6 +49,7 @@ public class Lavadora extends Electrodomestico{
         if (getCarga() > 30) {
             setPrecio(getPrecio() + 500);
         } 
+        System.out.println("Lavadora");
         System.out.println("Precio ajustado: " + getPrecio());
     }
     
