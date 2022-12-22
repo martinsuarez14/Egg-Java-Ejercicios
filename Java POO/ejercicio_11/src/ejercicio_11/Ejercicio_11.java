@@ -20,26 +20,43 @@ public class Ejercicio_11 {
     public static void main(String[] args) {
 
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
+//
+//        System.out.println("Ingrese el día de nacimiento: ");
+//        int dia = leer.nextInt();
+//        System.out.println("Ingrese el mes de nacimiento: ");
+//        int mes = leer.nextInt();
+//
+//        System.out.println("Ingrese el año de nacimiento: ");
+//        int anio = leer.nextInt();
+//
+//        Date fecha = new Date(anio, mes, dia);
+//        System.out.println("Día: " + fecha.getDate()+ "\n"
+//                + "Mes: " + fecha.getMonth() + "\n"
+//                + "Año: " + fecha.getYear());
+//
+//        Date fechaActual = new Date();
+//        System.out.println(fechaActual);
+//
+//        int años = fechaActual.getYear() - (fecha.getYear()-1900);
+//        int meses = fechaActual.getMonth() - (fecha.getMonth()-1);
+//        System.out.println("Pasaron " + años + " años y " + meses + " meses.");
 
-        System.out.println("Ingrese el día de nacimiento: ");
+        System.out.println("dia");
         int dia = leer.nextInt();
-        System.out.println("Ingrese el mes de nacimiento: ");
+        System.out.println("mes");
         int mes = leer.nextInt();
-
-        System.out.println("Ingrese el año de nacimiento: ");
+        System.out.println("año");
         int anio = leer.nextInt();
-
-        Date fecha = new Date(anio, mes, dia);
-        System.out.println("Día: " + fecha.getDate()+ "\n"
-                + "Mes: " + fecha.getMonth() + "\n"
-                + "Año: " + fecha.getYear());
-
+        
+        
+        Date fechainicio = new Date(anio - 1900, mes - 1, dia);
         Date fechaActual = new Date();
-        System.out.println(fechaActual);
-
-        int años = fechaActual.getYear() - (fecha.getYear()-1900);
-        int meses = fechaActual.getMonth() - (fecha.getMonth()-1);
-        System.out.println("Pasaron " + años + " años y " + meses + " meses.");
+        
+        int mili = 86400000;
+        
+        int dias = (int) ((fechaActual.getTime() - fechainicio.getTime()) / mili);
+        
+        System.out.println("Pasaron " + dias + "días");
     }
 
 }

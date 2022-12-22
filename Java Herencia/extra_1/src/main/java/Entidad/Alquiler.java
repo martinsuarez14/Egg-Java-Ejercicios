@@ -88,6 +88,7 @@ public class Alquiler {
     public int precioDelAlquiler(Barco b1){
         
         int milisegundosPorDia = 86400000;
+        
         int dias = (int)((getFechaDeDevolucion().getTime() - getFechaDeAlquiler().getTime()) / milisegundosPorDia);
         
         return b1.modulo() * dias;
